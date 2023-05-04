@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dos Attack</title>
+</head>
+<body>
+    <h1>Attack</h1>
+    <label>Input</label>
+    <p id="inputT"></p>
+    <label>Input</label>
+    <p id="result"></p>
+
+    <script>
+        var firstValue = 100;
+        var formula = '10 + firstValue ; while(true){}';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const input = document.getElementById('inputT');
+            const result = document.getElementById('result');
+
+            input.innerText = formula;
+            result.innerText = eval(formula)
+        });
+    </script>
+</body>
+</html>
